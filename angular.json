@@ -25,9 +25,13 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.css"
+            
             ],
-            "scripts": []
+            "scripts": [
+              "C:/Users/samab/ArgentinaPrograma/node_modules/bootstrap/dist/js/bootstrap.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -94,5 +98,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "518c1ebe-e594-424f-a7ca-090bae07f266"
   }
 }
