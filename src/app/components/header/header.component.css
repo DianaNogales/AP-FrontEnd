@@ -1,9 +1,9 @@
 div{
-    background-color: rgb(132, 151, 200);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(34 42 48);
+    border-bottom: 3px solid #68a0c6;
 }
 
-app-social{
-    float: right;
-    margin-top: 100px;
-    
-}
