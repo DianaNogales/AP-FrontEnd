@@ -1,0 +1,15 @@
+<section>
+    <div class="containerr">
+    <form  action="#" #f="ngForm" (ngSubmit)= "onLogin()" novalidate>
+        <h1>Iniciar Sesion</h1>
+        <div>
+            <input type="email" id="nombreUsuario" name="nombreUsuario" placeholder="Username" [(ngModel)]="nombreUsuario" required/>
+            <input type="password" id="password" name="password" placeholder="Password" [(ngModel)]="password" required/>
+            <button type="submit">Ingresar Usuario</button>
+
+        </div>
+    </form>  
+    </div>
+          
+</section>
+ 

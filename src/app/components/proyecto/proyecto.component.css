@@ -1,0 +1,83 @@
+.colorXD{
+    background-color: rgb(36 42 47);
+}
+
+
+#portafolio{
+    max-width: 1500px;
+    padding: 100px 0;
+    margin: auto;
+}
+
+#portafolio .titulo-seccion{
+    text-align: center;
+    font-size: 30px;
+    text-transform: uppercase;
+    color: white;
+    text-decoration: underline;
+    text-decoration-color: #1CB698;
+    text-decoration-thickness: 5px;
+}
+
+#portafolio .fila{
+    display: flex;
+    justify-content: space-between;
+    margin: 60px 0;
+}
+
+#portafolio .fila .proyecto{
+    max-width: 500px;
+    border: 4px solid #115f4f6b;
+    margin: 0 10px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 2%;
+}
+
+
+#portafolio .fila .proyecto img{
+    width: 100%;
+    height: 100%;
+    filter: grayscale(0.6) ;
+    object-fit: cover;
+    transition: .5s;
+}
+
+#portafolio .fila .proyecto:hover img{
+    filter: grayscale(0) ;
+}
+
+.info{
+    position: absolute;
+    left: 0;
+    background-color: #1CB698;
+    color: #fcfffe;
+    width: 100%;
+    padding: 20px;
+    opacity: 0;
+    bottom: -20px;
+    transition: .5s;
+
+}
+
+.fila .proyecto:hover .info{
+    opacity: 1;
+    bottom: 1;
+}
+
+/* respon */
+
+@media screen and (max-width:900px){
+
+    #portafolio{
+        padding: 50px 0;
+    }
+
+    #portafolio .fila{
+        display: block;
+    }
+
+    #portafolio .fila .proyecto{
+        margin: 10px auto;
+    }
+}

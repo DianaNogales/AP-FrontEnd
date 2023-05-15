@@ -1,4 +1,12 @@
-<div>
-    <app-logo-ap></app-logo-ap>
-    <app-social> </app-social>
-</div>
+<section>
+    <nav class="header-nav">
+        <img src="../../../assets/logo.png" alt="logoAp" class="header-logo">
+        <ul class="Redes">
+            <li><a href="#" class="nav-link">Inicio</a></li>
+            <li><a href="#" class="nav-link">Contacto</a></li>
+            <li><a href="#" class="nav-link">Acerca de</a></li>
+            <button type="button" class="btn btn-outline-light" (click)="login()" *ngIf="!isLogged">Ingreso</button>
+            <button type="button" class="btn btn-outline-light" (click)="onLogOut()" *ngIf="isLogged">Cerrar Sesion</button>
+        </ul>
+    </nav>
+</section>

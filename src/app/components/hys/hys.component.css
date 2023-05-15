@@ -1,41 +1,208 @@
-.skills{
-    min-height: auto;
-    padding-bottom: 7rem;
-        background-color: rgb(32 33 36);
-        color: white;
-        padding: 80px 20px;
+/* Skills */
+.skills {
+    background-color: #1e2326;
+    color: white;
+    padding: 50px 20px;
+}
+
+.skills .contenido-seccion{
+    max-width: 1100px;
+    margin: auto;
+}
+
+.skills h2{
+    font-size: 48px;
+    font-family: cursive;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.skills .fila{
+    display: flex;
+}
+
+.skills .fila .col{
+    width: 50%;
+    padding: 0 20px;
+}
+
+.skills .fila .col h3 {
+    font-size: 28px;
+    font-family: cursive;
+    margin-bottom: 25px;
+}
+
+.skills .skill > span{
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.skills .skill .barra-skill{
+    height: 8px;
+    width: 80%;
+    background-color: #1e2326;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.skills .skill .progreso{
+    position: absolute;
+    background-color:#1CB698; 
+    top: 0;
+    left: 0;
+    height: 8px;
+}
+
+.skills .skill .barra-skill span{
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    background-color: #1CB698;
+    border-radius: 50px;
+    line-height: 40px;
+    text-align: center;
+    top: -17px;
+    right: -17px;
+    font-size: 14px;
+}
+
+/* dinamicas */
+
+.skills .skill .javascript{
+    width: 0%;
+    animation: 2s javascript forwards;
+}
+
+@keyframes javascript{
+    0%{width: 0%;}
+    100%{width: 60%;}
+}
+
+
+.skills .skill .htmlcss{
+    width: 0%;
+    animation: 2s htmlcss forwards;
+}
+
+@keyframes htmlcss{
+    0%{width: 0%;}
+    100%{width: 80%;}
+}
+
+.skills .skill .angular{
+    width: 0%;
+    animation: 2s angular forwards;
+}
+
+@keyframes angular{
+    0%{width: 0%;}
+    100%{width: 70%;}
+}
+
+
+
+.skills .skill .react{
+    width: 0%;
+    animation: 2s react forwards;
+}
+
+@keyframes react{
+    0%{width: 0%;}
+    100%{width: 50%;}
+}
+
+.skills .skill .typescript{
+    width: 0%;
+    animation: 2s typescript forwards;
+}
+
+@keyframes typescript{
+    0%{width: 0%;}
+    100%{width: 40%;}
+}
+
+
+
+
+.skills .skill .mysql{
+    width: 0%;
+    animation: 2s mysql forwards;
+}
+
+@keyframes mysql{
+    0%{width: 0%;}
+    100%{width: 60%;}
+}
+
+/* BACKEND */
+
+.skills .skill .java{
+    width: 0%;
+    animation: 2s java forwards;
+}
+
+@keyframes java{
+    0%{width: 0%;}
+    100%{width: 60%;}
+}
+
+
+.skills .skill .java{
+    width: 0%;
+    animation: 2s java forwards;
+}
+
+@keyframes java{
+    0%{width: 0%;}
+    100%{width: 50%;}
+}
+
+
+.skills .skill .python{
+    width: 0%;
+    animation: 2s python forwards;
+}
+
+@keyframes python{
+    0%{width: 0%;}
+    100%{width: 70%;}
+}
+
+.skills .skill .spring{
+    width: 0%;
+    animation: 2s spring forwards;
+}
+
+@keyframes spring{
+    0%{width: 0%;}
+    100%{width: 40%;}
+}
+
+
+.skills .skill .express{
+    width: 0%;
+    animation: 2s express forwards;
+}
+
+@keyframes express{
+    0%{width: 0%;}
+    100%{width: 40%;}
+}
+
+/* respon */
+
+@media (max-width: 575px){
+    .skills .fila{
+        display: block;
+    }
+    .skills .fila .col{
+        width: 100%;
     }
 
-
-.skills .skills-row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 5rem;
+    .skills .fila .col .barra-skill{
+        width: 100%;
+    }
 }
 
-.skills-row .skills-column{
-    flex: 1 1 40rem;
-}
 
-.skills-column .title{
-    font-size: 2.5rem;
-    margin: 0 0 1.5rem;
-}
-
-.skills-box .skills-content{
-    position: relative;
-    border: .2rem solid ;
-    border-radius: 6rem;
-    padding: .5rem 1.5rem;
-}
-
-.skills-content .progress {
-    padding: 1rem 0;
-    box-shadow: none;
-}
-
-.skills-content .progress h3 {
-    font-size: 1.7rem;
-    display: flex;
-    justify-content: space-between;
-}

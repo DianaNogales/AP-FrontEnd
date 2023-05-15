@@ -1,0 +1,33 @@
+<div class="item {{domClass}}">
+    <div class="header">
+        <h4 *ngIf="!editMode">{{experiencia.titlE}}</h4>
+        <div *ngIf="editMode">
+            <input type="text" [(ngModel)]="experiencia.titlE">
+        </div>
+        <div class="right" *ngIf="isLogged">
+            <button class="botton" *ngIf="editMode" (click)="onSaveE()">Guadar</button>
+            <button class="botton" *ngIf="!editMode" (click)="onEdit()">Editar</button>
+            <button class="botton" (click)="onDeleteE()">Eliminar</button>
+        </div>
+    </div>
+    <div class="content">
+        <span *ngIf="!editMode" class="casa">{{experiencia.nombrE}}</span>
+        <div *ngIf="editMode">
+            <input type="text" [(ngModel)]="experiencia.nombrE">
+        </div>
+        <span *ngIf="!editMode" class="casa">{{experiencia.datE}}</span>
+        <div *ngIf="editMode">
+            <input type="text" [(ngModel)]="experiencia.datE">
+        </div>
+        <p *ngIf="!editMode">{{experiencia.descripcionE}}</p>
+        <div *ngIf="editMode">
+            <input type="text"  [(ngModel)]="experiencia.descripcionE">
+        </div>
+    </div>
+    <div *ngIf="domClass=='izq'" class="conectori">
+        <div class="circuloi"></div>
+    </div>
+    <div *ngIf="domClass=='der'" class="conectord">
+        <div class="circulod"></div>
+    </div>
+</div>

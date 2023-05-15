@@ -3,28 +3,17 @@
         <h2>Experiencia</h2>
         <div class="fila">
             <div class="col izquierda">
-                <h3>Educacion</h3>
-                <div class="item izq">
-                    <h4>Arte y Multimedias</h4>
-                    <span class="casa">Universidad</span>
-                    <span class="fecha">2018-2023</span>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum ipsum eius tempore! Impedit, nesciunt doloribus. Pariatur quidem aspernatur dicta ea nam maiores illo modi! Error reiciendis similique quas voluptatum eos.</p>
-                    <div class="conectori">
-                        <div class="circuloi"></div>
+                <div class="conteiner-title">
+                    <h3>Educacion</h3>
+                    <div *ngIf="isLogged">
+                        <button class="botton" (click)="nuevo('ed')">Nuevo</button>
                     </div>
                 </div>
 
-                <div class="item izq">
-                    <h4>Arte y Multimedias</h4>
-                    <span class="casa">Universidad</span>
-                    <span class="fecha">2018-2023</span>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum ipsum eius tempore! Impedit, nesciunt doloribus. Pariatur quidem aspernatur dicta ea nam maiores illo modi! Error reiciendis similique quas voluptatum eos.</p>
-                    <div class="conectori">
-                        <div class="circuloi"></div>
-                    </div>
-                </div>
+                <app-experiencia-block *ngFor="let ed of data[0].list" [experiencia]="ed" domClass="izq" [isLogged]="isLogged" (onSave)="onSave(ed)" (onDelete)="onDelete(ed)"/>
 
-                <div class="item izq">
+                    
+                <!-- <div class="item izq">
                     <h4>Arte y Multimedias</h4>
                     <span class="casa">Universidad</span>
                     <span class="fecha">2018-2023</span>
@@ -32,12 +21,40 @@
                     <div class="conectori">
                         <div class="circuloi"></div>
                     </div>
-                </div>
+                </div> -->
+
+                <!-- <div class="item izq">
+                    <h4>Arte y Multimedias</h4>
+                    <span class="casa">Universidad</span>
+                    <span class="fecha">2018-2023</span>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum ipsum eius tempore! Impedit, nesciunt doloribus. Pariatur quidem aspernatur dicta ea nam maiores illo modi! Error reiciendis similique quas voluptatum eos.</p>
+                    <div class="conectori">
+                        <div class="circuloi"></div>
+                    </div>
+                </div> -->
             </div>
 
             <div class="col derecha">
-                <h3>Experiencia de Trabajo</h3>
-                <div class="item der">
+                <div class="conteiner-title">
+                    <h3>Experiencia de Trabajo</h3>
+                    <div *ngIf="isLogged">
+                        <button class="botton" (click)="nuevo('ex')">Nuevo</button>
+                    </div>
+                </div>
+
+                <app-experiencia-block *ngFor="let ed of data[1].list" [experiencia]="ed" domClass="der" [isLogged]="isLogged" (onSave)="onSave(ed)" (onDelete)="onDelete(ed)"/>
+
+                <!-- <div *ngFor="let ex of data[1].list" class="item der">
+                    <h4>Arte y Multimedias</h4>
+                    <span class="casa">{{ex.nombrE}}</span>
+                    <span class="fecha">2018-2023</span>
+                    <p>{{ex.descripcionE}}</p>
+                    <div class="conectord">
+                        <div class="circulod"></div>
+                    </div>
+                </div> -->
+
+                <!-- <div class="item der">
                     <h4>Front Developer</h4>
                     <span class="casa">Nombre de Compa;ia</span>
                     <span class="fecha">2018-2023</span>
@@ -65,10 +82,86 @@
                     <div class="conectord">
                         <div class="circulod"></div>
                     </div>
-                </div>
+                </div> -->
                 
             </div>
         </div>
+        <!-- <div *ngIf="isLogged">
+            <input type="text" id="ex_title">
+            <input type="text" id="ex_description">
+            <button (click)="nuevo('ex')">Nuevo</button>
+        </div> -->
     </div>
 
 </section>
+
+
+<!-- <section id="curriculum" class="curriculum">
+    <div class="contenido-seccion">
+        <h2>Experiencia</h2>
+        <div class="col-lg-2">
+            <button type="button"></button>
+        </div>
+
+        
+        
+        <div class="col lg1"></div>
+        <div class="col-lg-11">
+        <table class="table">
+            <tbody>
+                <tr *ngFor="let Experiencia of expe" >
+                    <td>{{Experiencia.nombreE}}</td>
+                    <td>{{Experiencia.desc}}</td>
+                    <td>editar</td>
+                    <td>borrar</td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+        
+        </div>
+    </div>
+
+</section> -->
+
+
+
+<!-- 
+ ts contenido-seccion
+
+
+import { Component, OnInit } from '@angular/core';
+import { Route, Router } from '@angular/router';
+import { Experiencia } from 'src/app/model/experiencia';
+import { SExperienciaService } from 'src/app/service/s-experiencia.service';
+
+@Component({
+  selector: 'app-new-experiencia',
+  templateUrl: './new-experiencia.component.html',
+  styleUrls: ['./new-experiencia.component.css']
+})
+export class NewExperienciaComponent implements OnInit {
+  nombreE: string = '';
+  descricionE: string = '';
+
+
+  constructor(private sExperiencia: SExperienciaService, private router: Router){}
+
+
+  ngOnInit(): void {
+  }
+
+  onCreate():void {
+    const expe = new Experiencia(this.nombreE, this.descricionE);
+    this.sExperiencia.save(expe).subscribe(
+      data=>{
+        alert("Experiencia ada;ida");
+        this.router.navigate([''])
+      }, err => {
+        alert('fallo');
+        this.router.navigate(['']);
+      }
+    )
+  }
+
+} -->
