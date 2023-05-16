@@ -22,5 +22,9 @@ footer .arriba{
     border-radius: 50%;
     line-height: 50px;
     font-size: 18px;
-    
+    cursor: pointer;
+}
+.arriba svg{
+    fill: rgb(30, 55, 102);
+    margin-top: -5px;
 }

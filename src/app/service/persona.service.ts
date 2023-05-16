@@ -9,7 +9,7 @@ import { persona } from '../model/persona.moldel';
 })
 export class PersonaService {
 
-     URL = 'http://localhost:8080/personas/';
+     URL = 'https://java.dolaractual.net/personas/';
 
   constructor(private http: HttpClient) { }
 

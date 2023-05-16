@@ -56,3 +56,25 @@ button{
     text-transform: uppercase;
     font-weight: bold;
 }
+
+@media screen and (max-width:1150px){
+    .header-nav{
+        min-width: 900px;
+    }
+}
+
+@media screen and (max-width:960px){
+    .header-nav{
+        min-width: 750px;
+    }
+}
+
+@media screen and (max-width:600px){
+    .header-nav{
+        min-width: 200px;
+    }
+    .header-nav li{
+        display: none;
+    }
+
+}
